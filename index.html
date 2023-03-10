@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevDetective - Dhanesh</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="stylesheet" href="./main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-git relative container w-[100vw] h-[100vh] overflow-x-hidden">
+     <div class=" w-[90%] md:w-[47em] mx-auto h-[100vh] text-[16px] textCont my-10 flex flex-col gap-5">
+           <header class=" flex items-center justify-between">
+              <h1 class="text-[28px] font-bold">DevDetective</h1>
+
+              <div class="relative">
+                <div class="light disable flex flex-row gap-3 items-center justify-between">
+                  <p onclick="darkMode()" class="font-bold cursor-pointer darktext">Light</p>
+                  <div onclick="darkMode()" class="icon-container cursor-pointer darkicon"><img id="mode-icon" src="./images/sun-icon.svg" alt=""></div>
+                 </div>
+                 <div class="dark flex flex-row gap-3 items-center justify-between">
+                  <p onclick="darkMode()" class="font-bold cursor-pointer darktext">DARK</p>
+                  <div onclick="darkMode()" class="icon-container cursor-pointer darkicon"><img id="mode-icon" src="./images/moon-icon.svg" alt=""></div>
+                 </div>
+              </div>
+            
+            
+           </header>
+
+           <main class="w-[100%] flex flex-col gap-1 md:gap-3">
+               <div class="w-[100%] bgCont h-[4em] rounded-xl flex justify-between search items-center search">
+                
+                <div class="pl-[4em] w-[70%] h-[4em] bg-[url('./images/search-icon.svg')] bg-left bg-no-repeat bgPosition flex items-center">
+                   <input id="input" type="search" placeholder="Enter a GitHub username..." class=" text-[13px] md:text-[20px] textCont bgCont outline-none h-[100%] w-[100%]">
+                </div>
+                 <button class="md:mr-4 mr-1 text-[12px] md:text-[16px] bg-[#0079ff] border-none rounded-xl text-[white] py-4 px-[1em] md:px-[12px] md:py-[16px] w-[6em] md:w-[8em] searchBtn">Search</button>
+               </div>
+
+               <!-- error -->
+               <div class="error w-[100%] h-[100%] bgCont flex flex-col items-center justify-center disable rounded-xl pb-5 mt-3">
+                <img src="./images/not-found.png" alt=""  class="md:w-[20em] w-[15em]">
+                <h1 class=" text-[1.5em] md:text-[3em]">User Not Found</h1>
+              </div>
+
+              
+               <div class="mainBox -mt-3  search bgCont rounded-xl p-4 md:p-8 flex flex-col items-center md:items-start md:grid  md:grid-cols-[0.3fr_1fr] gap-10 ">
+
+                <div class=""><img  class="profilePic rounded-full " src="./images/myImage.png" alt="" width="130px"></div>
+              
+                <div class="flex flex-col gap-3 md:gap-8 ">
+                  <!-- info -->
+                  <div class="flex flex-col justify-between items-center md:flex-row md:items-center gap-6 md:gap-0">
+                    <div class="flex flex-col items-center md:justify-center md:items-start ">
+                    <h1 class="text-[1em] md:text-[1.6em] font-bold userName">Dande Dhanesh Kumar</h1>
+                    <a href="" class="userLink text-[16px] text-blue-500 underline" target="_blank">@dandedhanesh</a>
+                    </div>
+                    <div class="dateJoined -mt-4 text-[14px] join">Joined 05 May 2020</div>
+                  </div>
+                  
+                  <!-- bio -->
+                  <div class="bio">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, iure?  
+                  </div>
+
+                  <!-- followers -->
+                  <div class="shadow-md rounded-xl bio grid grid-cols-3 h-[6em] md:text-[16px] text-[13px] bgCont">
+                      <div class="flex flex-col items-center justify-between py-3">
+                        <div>Repos</div>
+                        <div class="repos text-[23px] font-bold">0</div>
+                      </div>
+                      <div class="flex flex-col items-center justify-between py-3">
+                        <div>Followers</div>
+                        <div class="followers text-[23px] font-bold">0</div>
+                      </div>
+                      <div class="flex flex-col items-center justify-between py-3">
+                        <div>Following</div>
+                        <div class="following text-[23px] font-bold">0</div>
+                      </div>
+                  </div>
+
+                  <!--links-->
+                  <div class="grid grid-rows-2 grid-cols-2 gap-6 md:ml-6 mt-3  md:mt-0">
+                      <div class="flex gap-2 items-start">
+                        <img src="./images/location-icon.svg" alt="" class="cursor-pointer">
+                        <a href="" class="location break-all -mt-1" target="_blank">Not available</a>
+                      </div>
+                      <div class="flex gap-2 items-start">
+                        <img src="./images/website-icon.svg" alt="" class="cursor-pointer">
+                        <a class="website break-all -mt-1" href="" target="_blank">Not available</a>
+                      </div>
+                      <div class="flex gap-2 items-start">
+                        <img src="./images/twitter-icon.svg" alt="" class="cursor-pointer">
+                        <a class="twitter break-all -mt-1" href="" target="_blank">Not available</a>
+                      </div>
+                      <div class="flex gap-2 items-start">
+                        <img src="./images/company-icon.svg" alt="" class="cursor-pointer">
+                        <a class="company break-all -mt-1" href="" target="_blank">Not available</a>
+                      </div>
+                  </div>
+
+                </div>
+               </div>
+
+           </main>
+    
+     </div>
+     <script src="./index.js"></script>
+</body>
+</html>
